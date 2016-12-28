@@ -1,0 +1,129 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black
+}
+
+.drop {
+	width: 2px;
+	height: 40px;
+	background-color: blue;
+	top: 0px;
+	left: 1400px;
+	position: fixed;
+	animation: drops 3s infinite linear;
+	z-index: 1;
+}
+
+@keyframes drops {
+	0%   { top: -120px; width: 2px;   height: 40px; border: none;            border-radius: 50%; background-color: blue;        /*left: 400px;*/ }
+	70%  { top: 90%;    width: 2px;   height: 40px; border: none;            border-radius: 50%; background-color: blue;        /*left: 400px;*/ }
+	71%  { top: 90%;    width: 0px;   height: 0px;  border: none;            border-radius: 50%; background-color: blue;        /*left: 400px;*/ }
+	75%  { top: 93%;    width: 0px;   height: 0px;  border: 5px double blue; border-radius: 50%; background-color: transparent; /*left: 400px;*/ }
+	85%  { top: 93%;    width: 50px;  height: 20px; border: 3px double blue; border-radius: 50%; background-color: transparent; /*left: 380px;*/ }
+	100% { top: 93%;    width: 75px;  height: 30px; border: 0px double blue; border-radius: 50%; background-color: transparent; /*left: 365px;*/ }
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	top: 300px;
+	left: 450px;
+}
+
+.box.a {
+	position: absolute;
+	background-color: red;
+}
+.box.f {
+	position: fixed;
+	background-color: green;
+	left: 150px;
+}
+
+.drop-container {
+	background-color: transparent;
+	
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 50px;
+}
+.drop-container .drop-drop {
+  animation: drop-drop 3s 1 ease-in;
+  background-color: transparent;
+  border: 1px solid #0000ff;
+  height: 40px;
+  margin: auto;
+  position: relative;
+  top: -120px;
+  width: 0px;
+}
+
+.drop-container .drop-drop.drop-drop1{
+	animation: drop-drop1 3s 1 ease-in;
+}
+.drop-container .drop-drop.drop-drop2{
+	animation: drop-drop2 3s 1 ease-in;
+}
+.drop-container .drop-drop.drop-drop3{
+	animation: drop-drop3 3s 1 ease-in;
+}
+
+@keyframes drop-drop1 {
+  0%   { top: -120px; border: 1px solid #0000ff;  height: 40px; width: 0;    border-radius: 0;   background-color: #0000ff; }
+  50%  { top: 90%;    border: none;               height: 40px; width: 2px;  border-radius: 50%; background-color: #0000ff; }
+  51%  { top: 90%;    border: none;               height: 00px; width: 0;    border-radius: 50%; background-color: transparent; }
+  55%  { top: 93%;    border: 5px double #0000ff; height: 00px; width: 0;    border-radius: 50%; background-color: transparent; }
+  60%  { top: 93%;    border: 3px double #0000ff; height: 10px; width: 75%;  border-radius: 50%; background-color: transparent; }
+  100% { top: 93%;    border: 0px double #0000ff; height: 20px; width: 100%; border-radius: 50%; background-color: transparent; }
+}
+@keyframes drop-drop2 {
+  0%   { top: -120px; border: 1px solid #0000ff;  height: 40px; width: 0;    border-radius: 0;   background-color: #0000ff; }
+  50%  { top: 85%;    border: none;               height: 40px; width: 2px;  border-radius: 50%; background-color: #0000ff; }
+  51%  { top: 85%;    border: none;               height: 00px; width: 0;    border-radius: 50%; background-color: transparent; }
+  55%  { top: 88%;    border: 5px double #0000ff; height: 00px; width: 0;    border-radius: 50%; background-color: transparent; }
+  60%  { top: 88%;    border: 3px double #0000ff; height: 10px; width: 75%;  border-radius: 50%; background-color: transparent; }
+  100% { top: 88%;    border: 0px double #0000ff; height: 20px; width: 100%; border-radius: 50%; background-color: transparent; }
+}
+@keyframes drop-drop3 {
+  0%   { top: -120px; border: 1px solid #0000ff;  height: 40px; width: 0;    border-radius: 0;   background-color: #0000ff; }
+  50%  { top: 80%;    border: none;               height: 40px; width: 2px;  border-radius: 50%; background-color: #0000ff; }
+  51%  { top: 80%;    border: none;               height: 00px; width: 0;    border-radius: 50%; background-color: transparent; }
+  55%  { top: 83%;    border: 5px double #0000ff; height: 00px; width: 0;    border-radius: 50%; background-color: transparent; }
+  60%  { top: 83%;    border: 3px double #0000ff; height: 10px; width: 75%;  border-radius: 50%; background-color: transparent; }
+  100% { top: 83%;    border: 0px double #0000ff; height: 20px; width: 100%; border-radius: 50%; background-color: transparent; }
+}
+
+.thunder {
+	animation: thunder 6s 2s infinite;
+	background-color: transparent;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 99999;
+}
+@keyframes thunder {
+	0%   { background-color: transparent }
+	86%  { background-color: transparent }
+	87%  { background-color: white; }
+	88%  { background-color: transparent }
+	89%  { background-color: white; }
+	100% { background-color: transparent }
+}
+
+.bld {
+	position: absolute;
+	top: 80%;
+	background-color: gray;
+	width: 100%;
+	height: 2px;
+}

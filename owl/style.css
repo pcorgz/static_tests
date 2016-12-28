@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+#folder {
+	width: 75%;
+}
+
+#folder .section {
+	margin-bottom: 40px;
+}
+
+#folder-select {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 25%;
+}
+
+#folder-select > ul {
+  padding: 0;
+  background: red;
+}
+
+#folder-select a {
+  padding: 5px 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#folder-select > ul ul {
+  padding-left: 20px;
+  list-style: none;
+  background: blue;
+}
+
+.owl-carousel {
+	margin: 0 auto 10px;
+	max-width: 1152px;
+	width: 100%;
+}
+
+.owl-carousel .owl-item img {
+	margin: auto;
+	max-width: 1152px;
+}
+
+.owl-dots {
+	position: relative;
+	text-align: center;
+}
+
+.owl-dots .owl-dot {
+	display: inline-block;
+}

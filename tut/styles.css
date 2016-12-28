@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+#checkboxes input + .square::selection,
+#checkboxes input + .box > span::selection {
+  background-color: transparent;
+}
+#checkboxes input + .square::-moz-selection
+#checkboxes input + .box > span::-moz-selection {
+	background-color: transparent;
+}
+
+#checkboxes {
+	background-color: darkgreen;
+	margin: 100px;
+	padding: 50px;
+}
+
+#checkboxes > div {
+	margin-bottom: 30px;
+}
+#checkboxes > div:last-child {
+	margin-bottom: 0;
+}
+
+#checkboxes input {
+	position: absolute;
+	left: -999999px;
+}
+
+/* square */
+#checkboxes input + .square {
+	cursor: pointer;
+	color: #bcd6ec;
+	display: block;
+	border: 2px solid #a5cdff;
+	background-color: #06205a;
+	padding: 10px 15px;
+	text-align: center;
+	width: 300px;
+}
+
+#checkboxes input + .square:hover {
+	border: 2px solid #0a54af;
+}
+
+#checkboxes input:checked + .square {
+	box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6);
+	border-color: white;
+	color: white;
+}
+
+/* box */
+#checkboxes input + .box {
+	border: 3px inset grey;
+	display: block;
+	cursor: pointer;
+	background-color: white;
+	height: 40px;
+	width: 40px;
+	border-radius: 10px;
+	position: relative;
+}
+
+#checkboxes input + .box:active {
+	background-color: lightgray;
+}
+
+#checkboxes input:checked + .box:before {
+	content: "\2713 ";
+	width: 100%;
+	display: block;
+	height: 34px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 30px;
+	float: left;
+}
+
+#checkboxes input + .box > span {
+	position: absolute;
+	left: 40px;
+	color: white;
+	white-space: nowrap;
+	line-height: 37px;
+	padding-left: 5px;
+}
+
+[href$=".pdf"]::after{
+    content: " " url("pdficon.png");
+}

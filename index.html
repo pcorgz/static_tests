@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Static examples</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Static CSS and JS examples</h1>
+  <div class="radios">
+    <input id="anim" type="radio" name="selection" checked="checked" value="anim" onchange="changeFrame(this);" />
+    <label for="anim">Animation</label>
+
+    <input id="icon" type="radio" name="selection" value="icon" onchange="changeFrame(this);" />
+    <label for="icon">Template (Almost)</label>
+
+    <input id="rain" type="radio" name="selection" value="rain" onchange="changeFrame(this);" />
+    <label for="rain">Rain</label>
+
+    <input id="3D" type="radio" name="selection" value="trd" onchange="changeFrame(this);" />
+    <label for="3D">3D CSS</label>
+
+    <input id="tut" type="radio" name="selection" value="tut" onchange="changeFrame(this);" />
+    <label for="tut">Simple CSS examples</label>
+  </div>
+  <iframe id="view" src="anim/anim.html"></iframe>
+
+  <script src="script.js"></script>
+</body>
+</html>
